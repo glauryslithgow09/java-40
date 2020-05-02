@@ -1,0 +1,77 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color: chocolate;">
+
+    <script src="java39.funciones.js"></script>
+    <div class="container" style="background-color: darkgray;">
+        <h1>Viernes</h1>
+        <script>
+            document.write('Fecha:' + retornarFecha());
+            document.write('<br>');
+            document.write('Hora :' + retornarHora());
+        </script>
+    </div>
+</body>
+
+</html>
+function retornarFecha() {
+    var fecha
+    fecha = new Date();
+    var cadena = fecha.getDate() + '/' + (fecha.getMonth() + 1) + '/' + fecha.getFullYear();
+    return cadena;
+}
+
+function retornarHora() {
+    var fecha
+    fecha = new Date();
+    var cadena = fecha.getHours() + ':' + fecha.getMinutes();
+    return cadena;
+}-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Suma(primerValor, segundoValor) {
+            this.primerValor = primerValor;
+            this.segundoValor = segundoValor;
+            this.cargarValor1 = cargarValor1;
+            this.cargarValor2 = cargarValor2;
+            this.retornarResultado = retornarResultado;
+        }
+
+        function cargarValor1(primerValor) {
+            this.primerValor = primerValor;
+        }
+
+        function cargarValor2(segundoValor) {
+            this.segundoValor = segundoValor;
+        }
+
+        function retornarResultado() {
+
+            this.primerValor + this.segundoValor;
+        }
+
+        var s = new Suma();
+        s.cargarValor1(10);
+        s.cargarValor2(20);
+        document.write('La suma de los dos valores es:' + s.retornarResultado());
+    </script>
+
+
+</body>
+
+</html>
